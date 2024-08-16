@@ -21,3 +21,8 @@
     width: calc(100% / 16); 
     height: calc(100% / 16);
 }
+
+/* use chaining for more specificity. Otherwise, the above rule overrides. */
+.grid div.hover {
+    background-color: #040404;
+}
