@@ -16,10 +16,6 @@
     background-color: #efecec;
     border: 1px solid #e0dfdff5;
     box-sizing: border-box;
-
-    /* width and height for each grid square */
-    width: calc(100% / 16); 
-    height: calc(100% / 16);
 }
 
 /* use chaining for more specificity. Otherwise, the above rule overrides. */
