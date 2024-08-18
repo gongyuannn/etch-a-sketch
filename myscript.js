@@ -25,14 +25,18 @@ generateGrid(16);
 
 //Click button to prompt for user input
 button.addEventListener("click", () => {
+    //Prompt until user gives valid input
+    let gridSize; 
 
-    let gridSize = prompt("Enter the grid size (whole no. from 1-100):");
+    while (true) {
+        gridSize = prompt("Enter the grid size (whole number from 1-100):");
+        gridSize = Number(gridSize);
 
-    gridSize = Number(gridSize);
+        if (!isNaN(gridSize) && Number.isInteger(gridSize) && gridSize >= 1 && gridSize <= 100) {
+            break; // Valid input, exit loop
+        }
 
-    if(isNaN(gridSize) || !Number.isInteger(gridSize) || gridSize < 1 || gridSize > 100) {
-        alert("Please enter a valid whole no. between 1-100");
-        return; //stop function from running
+        alert("Please enter a valid whole number between 1 and 100.");
     }
 
     //Generate grid based on user input
