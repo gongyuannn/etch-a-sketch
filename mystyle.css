@@ -1,3 +1,35 @@
+body {
+    font-family: Arial, san-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 1.2em;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 .grid {
     /* ensure sizing includes padding and border */
     box-sizing: border-box;
@@ -21,4 +53,18 @@
 /* use chaining for more specificity. Otherwise, the above rule overrides. */
 .grid div.hover {
     background-color: #040404;
+}
+
+button {
+    padding: 5px 10px;
+    font-size: 0.9em;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: 1px solid #0056b3;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
 }
