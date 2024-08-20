@@ -1,7 +1,7 @@
 body {
-    font-family: Arial, san-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,23 +11,23 @@ body {
 }
 
 .header h1 {
-    font-size: 2.5em;
+    font-size: 2em;
     margin-bottom: 10px;
 }
 
 .header p {
-    font-size: 1.2em;
+    font-size: 1.1em;
     color: #555;
-    max-width: 600px;
+    max-width: 90%;
     margin: 0 auto;
     text-align: justify;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 main {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
 }
 
 .grid {
@@ -35,13 +35,17 @@ main {
     box-sizing: border-box;
 
     /* set fixed size for grid */
-    width: 500px;
-    height: 500px;
+    max-width: 500px;
+    max-height: 500px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
 
     /* wrap elements to the next line */
     display: flex;
     flex-wrap: wrap; 
     border: 2px solid black;
+    
 }
 
 .grid div{
@@ -56,15 +60,40 @@ main {
 }
 
 button {
-    padding: 5px 10px;
+    padding: 10px 20px;
     font-size: 0.9em;
     cursor: pointer;
     background-color: #007BFF;
     color: white;
     border: 1px solid #0056b3;
     border-radius: 5px;
+    width: 100%;
+    max-width: 200px;
 }
 
 button:hover {
     background-color: #0056b3;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 400px) {
+    .header h1 {
+        font-size: 1.8em;
+    }
+
+    .header p {
+        font-size: 1em;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .grid {
+        max-width: 300px;
+        max-height: 300px;
+    }
+
 }
