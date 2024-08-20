@@ -1,5 +1,14 @@
+//TO-DO: mobile interface
+//TO-DO: Optional colorful
+//TO-DO: Optional gradient
+
 const container = document.querySelector(".grid");
-const button = document.querySelector("#generateGrid");
+const newButton = document.querySelector("#generateGrid");
+const resetButton = document.querySelector("#resetGrid");
+
+//Create default 16x 16 grid
+let gridSize = 16; 
+generateGrid(gridSize);
 
 // Create function to generate grid squares
 function generateGrid(gridSize) {
@@ -20,14 +29,10 @@ function generateGrid(gridSize) {
     }
 }
 
-//Create default 16x 16 grid
-generateGrid(16);
-
-//Click button to prompt for user input
-button.addEventListener("click", () => {
+//Click newButton to prompt for user input
+newButton.addEventListener("click", () => {
     //Prompt until user gives valid input
-    let gridSize; 
-
+    
     while (true) {
         gridSize = prompt("Enter the grid size (whole number from 1-100):");
         gridSize = Number(gridSize);
@@ -43,5 +48,9 @@ button.addEventListener("click", () => {
     generateGrid(gridSize);
 
 });
+
+resetButton.addEventListener("click", ()=>
+    generateGrid(gridSize)
+)
 
 
