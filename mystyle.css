@@ -26,8 +26,38 @@ body {
 
 main {
     display: flex;
+    /* column to stack buttons and grid sections */
     flex-direction: column;
     gap: 20px;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    /* center buttons */
+    justify-content: center;
+    width: 100%;
+    /* add gap between buttons */
+    gap: 10px;
+
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 0.9em;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: 1px solid #0056b3;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 200px;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
 }
 
 .grid {
@@ -59,22 +89,6 @@ main {
     background-color: #040404;
 }
 
-button {
-    padding: 10px 20px;
-    font-size: 0.9em;
-    cursor: pointer;
-    background-color: #007BFF;
-    color: white;
-    border: 1px solid #0056b3;
-    border-radius: 5px;
-    width: 100%;
-    max-width: 200px;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
 /* Media query for smaller screens */
 @media (max-width: 400px) {
     .header h1 {
@@ -86,9 +100,13 @@ button:hover {
     }
 
     .buttons {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
+        gap: 5px;
+    }
+    
+    button {
+        font-size: 0.9em;
+        padding: 8px 16px;
+        max-width: 150px;
     }
     
     .grid {

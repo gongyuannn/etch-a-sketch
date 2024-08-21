@@ -1,4 +1,3 @@
-//TO-DO: mobile interface
 //TO-DO: Optional colorful
 //TO-DO: Optional gradient
 
