@@ -1,7 +1,3 @@
-// - for gradient - if it is already fully opaque, restart at 1
-// - push to main branch
-// fix bottom line for smaller screens (disappearing)
-
 const container = document.querySelector(".grid");
 const newButton = document.querySelector("#generateGrid");
 const resetButton = document.querySelector("#resetGrid");

@@ -78,6 +78,7 @@ button:hover {
     flex-wrap: wrap; 
     border: 2px solid black;
     
+    overflow: hidden; 
 }
 
 .grid div{
