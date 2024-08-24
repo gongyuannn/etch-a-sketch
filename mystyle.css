@@ -1,3 +1,5 @@
+/* To fix (21 Aug): Grid squares spill out of bottom margin for mobile interfaces*/
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -82,11 +84,6 @@ button:hover {
     background-color: #efecec;
     border: 1px solid #e0dfdff5;
     box-sizing: border-box;
-}
-
-/* use chaining for more specificity. Otherwise, the above rule overrides. */
-.grid div.hover {
-    background-color: #040404;
 }
 
 /* Media query for smaller screens */
